@@ -1,0 +1,22 @@
+
+<section class="search-results main-content">
+  <div id="recipeDiv">
+        <div class="gallery"*ngFor="let r of recipes">
+          <div class="grid-item recipe-image">
+              <img src={{r.JSON.image_url}} />
+          </div>
+          <div class="desc">
+            <div>
+              <a href={{r.JSON.source_url}}>{{r.JSON.title}}</a>
+            </div>
+            <div>
+              <a href={{r.JSON.publisher_url}}>Publisher: {{r.JSON.publisher}}</a>
+            </div>
+            <div class="grid-item save">
+              <button [hidden]=r.saved id ="button" class="btn btn-primary" (click)="saveRecipe(r.JSON)">Save</button>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+</section>

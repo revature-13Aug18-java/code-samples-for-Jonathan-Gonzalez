@@ -1,0 +1,20 @@
+    <div id="recipeDiv">
+          <div class="gallery" *ngFor="let r of response">
+            <div class="grid-item recipe-image">
+                <img src={{r.recipeJSON.image_url}} />
+            </div>
+            <div class="desc">
+              <div>
+                <a href={{r.recipeJSON.source_url}}>{{r.recipeJSON.title}}</a>
+              </div>
+              <div>
+                <a href={{r.recipeJSON.publisher_url}}>Publisher: {{r.recipeJSON.publisher}}</a>
+              </div>
+              <div class="grid-item save">
+                  <button class="btn btn-primary" (click)="deleteRecipe(r.recipeId)">Delete</button>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+
